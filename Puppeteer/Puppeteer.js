@@ -81,11 +81,11 @@ const { setMaxIdleHTTPParsers } = require('http');
   const page = await browser.newPage();
   await page.goto('file:///C:/testautomation-playground/frames.html');
   await page.setViewport({ width: 1920, height: 1080 });
-  //identify frame
+  //identify frame 1
   const identifiedFrame1 = await page.$("#frame1")
-  //move to frame
+  //move to frame 1
   const enteredFrame1 = await identifiedFrame1.contentFrame();
-  // actions in frame
+  // actions in frame 1
   const button1 = await enteredFrame1.$("[id='click_me_1']")
   const textOfButton1BeforeClick = await (await button1.getProperty('textContent')).jsonValue()
   assert.strictEqual(textOfButton1BeforeClick, 'Click Me 1');
@@ -93,22 +93,33 @@ const { setMaxIdleHTTPParsers } = require('http');
   const textOfButton1AfterClick = await (await button1.getProperty('textContent')).jsonValue()
   assert.strictEqual(textOfButton1AfterClick, 'Clicked');
 
+  //identify frame 2
+  const identifiedFrame2 = await enteredFrame1.$("#frame2")
+  //move to frame 2
+  const enteredFrame2 = await identifiedFrame2.contentFrame();
+  // actions in frame 2
+  const button2 = await enteredFrame2.$("[id='click_me_2']")
+  const textOfButton2BeforeClick = await (await button2.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfButton2BeforeClick, 'Click Me 2');
+  await enteredFrame2.click('#click_me_2');
+  const textOfButton2AfterClick = await (await button2.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfButton2AfterClick, 'Clicked');
 
-  // let clickAreaLocator = '#click_area';
-  // const clickTypeLocatorElement = await page.$("[id='click_type']")
-  // const textOfClickTypeBeforeClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-  // assert.strictEqual(textOfClickTypeBeforeClick, '');
-  // //click
-  //  await page.click(clickAreaLocator);
-  // const textOfClickTypeAfterClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-  // assert.strictEqual(textOfClickTypeAfterClick, 'Click');
-  // // right click
-  // await page.click(clickAreaLocator, { button: 'right',})
-  // const textOfClickTypeAfterRightClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-  // assert.strictEqual(textOfClickTypeAfterRightClick, 'Right-Click');
-  // //double click
-  // await page.click(clickAreaLocator, { clickCount: 2 })
-  // const textOfClickTypeAfterDoubleClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-  // assert.strictEqual(textOfClickTypeAfterDoubleClick, 'Double-Click');  
+  //identify frame 3
+  const identifiedFrame3 = await enteredFrame1.$("#frame3")
+  //move to frame 3
+  const enteredFrame3 = await identifiedFrame3.contentFrame();
+
+  //identify frame 4
+  const identifiedFrame4 = await enteredFrame3.$("#frame4")
+  //move to frame 4
+  const enteredFrame4 = await identifiedFrame4.contentFrame();
+  // actions in frame 4
+  const button4 = await enteredFrame4.$("[id='click_me_4']")
+  const textOfButton4BeforeClick = await (await button4.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfButton4BeforeClick, 'Click Me 4');
+  await enteredFrame4.click('#click_me_4');
+  const textOfButton4AfterClick = await (await button4.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfButton4AfterClick, 'Clicked');
   await browser.close();
 })();
