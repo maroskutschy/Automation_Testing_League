@@ -1,0 +1,7 @@
+//https://saucelabs.com/resources/blog/selenium-javascript-tutorial-web-automation
+//https://googlechromelabs.github.io/chrome-for-testing/#stable
+//C:\Users\Maros\AppData\Local\rasjani\WebDriverManager\
+// how to update chromedriver: https://stackoverflow.com/questions/75510622/webdriver-manager-for-selenium-javascript-tests
+// npm i -g webdriver-manager
+//webdriver-manager update 
+// how to run the test: node .\Selenium.js

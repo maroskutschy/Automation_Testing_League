@@ -1,0 +1,13 @@
+in root of the project (for VS Code Plugin): install:
+and also in the sufolder install:
+npm install -g testcafe
+OR
+npm install testcafe
+
+install Plugins:
+TestCafe Snippets
+TestCafe Test Runner
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+testcafe chrome TestCafe.js
