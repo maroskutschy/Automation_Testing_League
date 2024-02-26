@@ -1,45 +1,46 @@
 import { Selector } from 'testcafe';
 
-// fixture('Login Testing')
-//     .page('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+fixture('Login Testing')
+    // .page('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+    .page('../Cypress/testautomation-playground/login.html');
 
-// test('Login', async t => {
-//     await t
-//         await t.expect(Selector("title").innerText).eql('Login')
-//         .typeText('#user', 'admin')
-//         .typeText('#password', 'admin')
-//         .click('#login')
-//         await t.expect(Selector("title").innerText).eql('Order Pizza')
+test('Login', async t => {
+    await t
+        await t.expect(Selector("title").innerText).eql('Login')
+        .typeText('#user', 'admin')
+        .typeText('#password', 'admin')
+        .click('#login')
+        await t.expect(Selector("title").innerText).eql('Order Pizza')
     
-// });
+});
 
-// fixture('Drag and Drop Testing')
-//     .page('file:///C:/testautomation-playground/mouse_events.html');
+fixture('Mouse Actions Testing')
+    .page('../Cypress/testautomation-playground/mouse_events.html');
 
-// test('Mouse actions', async t => {
-//     await t
-//         // click, right click and double click
-//         let clickAreaLocator = '#click_area';
-//         let clikTypeLocator = '#click_type';
-//         // click
-//         await t.expect(Selector(clikTypeLocator).innerText).eql('')
-//         .click(clickAreaLocator)
-//         .expect(Selector(clikTypeLocator).innerText).eql('Click')
-//         // right click
-//         await t.rightClick(clickAreaLocator)
-//         .expect(Selector(clikTypeLocator).innerText).eql('Right-Click')
-//         //double click
-//         await t.doubleClick(clickAreaLocator)
-//         .expect(Selector(clikTypeLocator).innerText).eql('Double-Click')
-//         // drag and drop
-//         await t.expect(Selector('#drop_target').innerText).eql('Target')
-//         .dragToElement('#drag_source', '#drop_target')
-//         await t.expect(Selector('#drop_target').innerText).eql('Drop is successful!')    
-// });
+test('Mouse actions', async t => {
+    await t
+        // click, right click and double click
+        let clickAreaLocator = '#click_area';
+        let clikTypeLocator = '#click_type';
+        // click
+        await t.expect(Selector(clikTypeLocator).innerText).eql('')
+        .click(clickAreaLocator)
+        .expect(Selector(clikTypeLocator).innerText).eql('Click')
+        // right click
+        await t.rightClick(clickAreaLocator)
+        .expect(Selector(clikTypeLocator).innerText).eql('Right-Click')
+        //double click
+        await t.doubleClick(clickAreaLocator)
+        .expect(Selector(clikTypeLocator).innerText).eql('Double-Click')
+        // drag and drop
+        await t.expect(Selector('#drop_target').innerText).eql('Target')
+        .dragToElement('#drag_source', '#drop_target')
+        await t.expect(Selector('#drop_target').innerText).eql('Drop is successful!')    
+});
 
 
 fixture('Iframes')
-    .page('file:///C:/testautomation-playground/frames.html');
+    .page('../Cypress/testautomation-playground/frames.html');
 
 test('Iframes testing', async t => {
     await t

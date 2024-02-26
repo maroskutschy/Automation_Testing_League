@@ -2,7 +2,7 @@ import { Selector } from 'testcafe';
 const assert = require("assert");
 
 fixture('Wait Testing')
-    .page('file:///C:/testautomation-playground/expected_conditions.html');
+    .page('../Cypress/testautomation-playground/expected_conditions.html');
     
 
 // test('Waiting for Alert and Prompt', async t => {
