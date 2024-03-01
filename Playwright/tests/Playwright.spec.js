@@ -1,33 +1,33 @@
-// @ts-check
-// const { test, expect } = require('@playwright/test');
-// test('Login', async ({ page }) => {
-//   await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
-//   await expect(page).toHaveTitle(/Login/);
-//   await page.getByPlaceholder('Username').fill('admin');
-//   await page.getByPlaceholder('Password').fill('admin');
-//   await page.getByRole('button', { name: 'Log in' }).click();
-//   await expect(page).toHaveTitle(/Order Pizza/);
+//@ts-check
+const { test, expect } = require('@playwright/test');
+test('Login', async ({ page }) => {
+  await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  await expect(page).toHaveTitle(/Login/);
+  await page.getByPlaceholder('Username').fill('admin');
+  await page.getByPlaceholder('Password').fill('admin');
+  await page.getByRole('button', { name: 'Log in' }).click();
+  await expect(page).toHaveTitle(/Order Pizza/);
 
-// });
+});
 
-//const { test, expect } = require('@playwright/test');
-// test('Mouse actions', async ({ page }) => {
-//   await page.goto('file:///C:/testautomation-playground/mouse_events.html');
-//   // click, right click, double click
-//   let clickAreaLocator = '#click_area';
-//   let clikTypeLocator = '#click_type';
-//   await expect(page.locator(clikTypeLocator)).toHaveText('');
-//   await page.locator(clickAreaLocator).click();
-//   await expect(page.locator(clikTypeLocator)).toHaveText('Click');
-//   await page.locator(clickAreaLocator).click({ button: 'right' });
-//   await expect(page.locator(clikTypeLocator)).toHaveText('Right-Click');
-//   await page.locator(clickAreaLocator).dblclick();
-//   await expect(page.locator(clikTypeLocator)).toHaveText('Double-Click');
-//   //drag and drop
-//   await expect(page.locator("#drop_target")).toHaveText("Target");
-//   await page.locator('#drag_source').dragTo(page.locator('#drop_target'));
-//   await expect(page.locator("#drop_target")).toHaveText("Drop is successful!");
-// });
+const { test, expect } = require('@playwright/test');
+test('Mouse actions', async ({ page }) => {
+  await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  // click, right click, double click
+  let clickAreaLocator = '#click_area';
+  let clikTypeLocator = '#click_type';
+  await expect(page.locator(clikTypeLocator)).toHaveText('');
+  await page.locator(clickAreaLocator).click();
+  await expect(page.locator(clikTypeLocator)).toHaveText('Click');
+  await page.locator(clickAreaLocator).click({ button: 'right' });
+  await expect(page.locator(clikTypeLocator)).toHaveText('Right-Click');
+  await page.locator(clickAreaLocator).dblclick();
+  await expect(page.locator(clikTypeLocator)).toHaveText('Double-Click');
+  //drag and drop
+  await expect(page.locator("#drop_target")).toHaveText("Target");
+  await page.locator('#drag_source').dragTo(page.locator('#drop_target'));
+  await expect(page.locator("#drop_target")).toHaveText("Drop is successful!");
+});
 
 const { test, expect } = require('@playwright/test');
 test('Iframes', async ({ page }) => {

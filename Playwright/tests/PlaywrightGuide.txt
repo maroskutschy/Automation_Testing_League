@@ -42,4 +42,12 @@ Happy hacking! 🎭
 identify element by ID: page.locator("#drop_target")
 
 npx playwright test Playwright.spec.js --headed
+npx playwright test Playwright_Wait.spec.js --headed
 npx playwright show-report
+
+how to run full screen in headed:
+https://stackoverflow.com/questions/71407251/playwright-wont-launch-full-screen
+Add args: ["--start-maximized"] to the launchOptions
+Remove the DeviceDescriptor Desktop Chrome from your project
+Set viewport: null in your project
+in playwright.config file

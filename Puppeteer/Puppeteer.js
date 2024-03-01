@@ -3,19 +3,19 @@ const assert = require("assert");
 const { start } = require('repl');
 const { setMaxIdleHTTPParsers } = require('http');
 
-// (async () => {
-//   const browser = await puppeteer.launch({headless: false});
-//   const page = await browser.newPage();
-//   await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
-//   const pageTitle1 = await page.title();
-//   assert.strictEqual(pageTitle1, 'Login');
-//   await page.type('#user', 'admin');
-//   await page.type('#password', 'admin');
-//   await page.click('#login')
-//   const pageTitle2 = await page.title();
-//   assert.strictEqual(pageTitle2, 'Order Pizza');
-//   await browser.close();
-// })();
+(async () => {
+  const browser = await puppeteer.launch({headless: false});
+  const page = await browser.newPage();
+  await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  const pageTitle1 = await page.title();
+  assert.strictEqual(pageTitle1, 'Login');
+  await page.type('#user', 'admin');
+  await page.type('#password', 'admin');
+  await page.click('#login')
+  const pageTitle2 = await page.title();
+  assert.strictEqual(pageTitle2, 'Order Pizza');
+  await browser.close();
+})();
 
 // Drag and drop not succesfull
 // (async () => {
@@ -50,30 +50,30 @@ const { setMaxIdleHTTPParsers } = require('http');
 // })();
 
 
-// // Click, Righr Click and Double Click
-// (async () => {
-//   const browser = await puppeteer.launch({headless: false});
-//   const page = await browser.newPage();
-//   await page.goto('file:///C:/testautomation-playground/mouse_events.html');
-//   await page.setViewport({ width: 1920, height: 1080 });
-//   let clickAreaLocator = '#click_area';
-//   const clickTypeLocatorElement = await page.$("[id='click_type']")
-//   const textOfClickTypeBeforeClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-//   assert.strictEqual(textOfClickTypeBeforeClick, '');
-//   //click
-//    await page.click(clickAreaLocator);
-//   const textOfClickTypeAfterClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-//   assert.strictEqual(textOfClickTypeAfterClick, 'Click');
-//   // right click
-//   await page.click(clickAreaLocator, { button: 'right',})
-//   const textOfClickTypeAfterRightClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-//   assert.strictEqual(textOfClickTypeAfterRightClick, 'Right-Click');
-//   //double click
-//   await page.click(clickAreaLocator, { clickCount: 2 })
-//   const textOfClickTypeAfterDoubleClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
-//   assert.strictEqual(textOfClickTypeAfterDoubleClick, 'Double-Click');  
-//   await browser.close();
-// })();
+// Click, Righr Click and Double Click
+(async () => {
+  const browser = await puppeteer.launch({headless: false});
+  const page = await browser.newPage();
+  await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  await page.setViewport({ width: 1920, height: 1080 });
+  let clickAreaLocator = '#click_area';
+  const clickTypeLocatorElement = await page.$("[id='click_type']")
+  const textOfClickTypeBeforeClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfClickTypeBeforeClick, '');
+  //click
+   await page.click(clickAreaLocator);
+  const textOfClickTypeAfterClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfClickTypeAfterClick, 'Click');
+  // right click
+  await page.click(clickAreaLocator, { button: 'right',})
+  const textOfClickTypeAfterRightClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfClickTypeAfterRightClick, 'Right-Click');
+  //double click
+  await page.click(clickAreaLocator, { clickCount: 2 })
+  const textOfClickTypeAfterDoubleClick = await (await clickTypeLocatorElement.getProperty('textContent')).jsonValue()
+  assert.strictEqual(textOfClickTypeAfterDoubleClick, 'Double-Click');  
+  await browser.close();
+})();
 
 // Iframes
 (async () => {
@@ -92,7 +92,6 @@ const { setMaxIdleHTTPParsers } = require('http');
   await enteredFrame1.click('#click_me_1');
   const textOfButton1AfterClick = await (await button1.getProperty('textContent')).jsonValue()
   assert.strictEqual(textOfButton1AfterClick, 'Clicked');
-
   //identify frame 2
   const identifiedFrame2 = await enteredFrame1.$("#frame2")
   //move to frame 2

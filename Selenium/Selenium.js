@@ -1,61 +1,61 @@
-// const { Builder, By, until } = require("selenium-webdriver");
-// const assert = require("assert");
-// async function loginTest() {
-//   let driver = await new Builder().forBrowser("chrome").build();
-//   try {
-//     await driver.get("file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html");
-//     const pageTitle1 = await driver.getTitle();
-//     assert.strictEqual(pageTitle1, "Login");
-//     await driver.wait(until.titleIs("Login"), 4000);
-//     await driver.findElement(By.id("user")).sendKeys("admin");
-//     await driver.findElement(By.id("password")).sendKeys("admin");
-//     await driver.findElement(By.id("login")).click();
-//     const pageTitle2 = await driver.getTitle();
-//     assert.strictEqual(pageTitle2, "Order Pizza");
-//     await driver.wait(until.titleIs("Order Pizza"), 4000);
-//   } finally {
-//     await driver.quit();
-//   }
-// }
-// loginTest();
+const { Builder, By, until } = require("selenium-webdriver");
+const assert = require("assert");
+async function loginTest() {
+  let driver = await new Builder().forBrowser("chrome").build();
+  try {
+    await driver.get("file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html");
+    const pageTitle1 = await driver.getTitle();
+    assert.strictEqual(pageTitle1, "Login");
+    await driver.wait(until.titleIs("Login"), 4000);
+    await driver.findElement(By.id("user")).sendKeys("admin");
+    await driver.findElement(By.id("password")).sendKeys("admin");
+    await driver.findElement(By.id("login")).click();
+    const pageTitle2 = await driver.getTitle();
+    assert.strictEqual(pageTitle2, "Order Pizza");
+    await driver.wait(until.titleIs("Order Pizza"), 4000);
+  } finally {
+    await driver.quit();
+  }
+}
+loginTest();
 
-// const { Builder, By, until } = require("selenium-webdriver");
-// const assert = require("assert");
-// async function dragAndDropTest() {
-//   let driver = await new Builder().forBrowser("chrome").build();
-//   try {
-//     await driver.get("file:///C:/testautomation-playground/mouse_events.html");
+const { Builder, By, until } = require("selenium-webdriver");
+const assert = require("assert");
+async function dragAndDropTest() {
+  let driver = await new Builder().forBrowser("chrome").build();
+  try {
+    await driver.get("file:///C:/testautomation-playground/mouse_events.html");
 
-//    // click, right click, double click
-//    let clickArea = driver.findElement(By.id("click_area"));
-//    let clickType = driver.findElement(By.id("click_type"));
-//    let clickTypeTextBeforeAnyClick = await clickType.getText();
-//    assert.strictEqual(clickTypeTextBeforeAnyClick, "");
-//    //click
-//    await clickArea.click();
-//    let clickTypeTextAfterClick = await clickType.getText();
-//    assert.strictEqual(clickTypeTextAfterClick, "Click");
-//    //right click
-//    await driver.actions().contextClick(clickArea).perform();
-//    let clickTypeTextAfterRightClick = await clickType.getText();
-//    assert.strictEqual(clickTypeTextAfterRightClick, "Right-Click");
-//    // double click
-//    await driver.actions().doubleClick(clickArea).perform();
-//    let clickTypeTextAfterDoubleClick = await clickType.getText();
-//    assert.strictEqual(clickTypeTextAfterDoubleClick, "Double-Click");
-//     // drag and drop
-//     let draggable = driver.findElement(By.id("drag_source"));
-//     let droppable = driver.findElement(By.id("drop_target"));
-//     let targetTextBeforeDragAndDrop = await droppable.getText();
-//     assert.strictEqual(targetTextBeforeDragAndDrop, "Target");
-//     await driver.actions().dragAndDrop(draggable, droppable).perform();
-//     let targetTextAfterDragAndDrop = await droppable.getText();
-//     assert.strictEqual(targetTextAfterDragAndDrop, "Drop is successful!"); 
-//   } finally {
-//     await driver.quit();
-//   }
-// }
-// dragAndDropTest();
+   // click, right click, double click
+   let clickArea = driver.findElement(By.id("click_area"));
+   let clickType = driver.findElement(By.id("click_type"));
+   let clickTypeTextBeforeAnyClick = await clickType.getText();
+   assert.strictEqual(clickTypeTextBeforeAnyClick, "");
+   //click
+   await clickArea.click();
+   let clickTypeTextAfterClick = await clickType.getText();
+   assert.strictEqual(clickTypeTextAfterClick, "Click");
+   //right click
+   await driver.actions().contextClick(clickArea).perform();
+   let clickTypeTextAfterRightClick = await clickType.getText();
+   assert.strictEqual(clickTypeTextAfterRightClick, "Right-Click");
+   // double click
+   await driver.actions().doubleClick(clickArea).perform();
+   let clickTypeTextAfterDoubleClick = await clickType.getText();
+   assert.strictEqual(clickTypeTextAfterDoubleClick, "Double-Click");
+    // drag and drop
+    let draggable = driver.findElement(By.id("drag_source"));
+    let droppable = driver.findElement(By.id("drop_target"));
+    let targetTextBeforeDragAndDrop = await droppable.getText();
+    assert.strictEqual(targetTextBeforeDragAndDrop, "Target");
+    await driver.actions().dragAndDrop(draggable, droppable).perform();
+    let targetTextAfterDragAndDrop = await droppable.getText();
+    assert.strictEqual(targetTextAfterDragAndDrop, "Drop is successful!"); 
+  } finally {
+    await driver.quit();
+  }
+}
+dragAndDropTest();
 
 
 const { Builder, By, until } = require("selenium-webdriver");

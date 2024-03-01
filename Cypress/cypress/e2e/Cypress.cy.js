@@ -1,37 +1,37 @@
-// describe('Login Page testing', () => {
-//   it('Login', () => {
-//     cy.visit('./testautomation-playground/login.html')
-//     cy.title().should('eq','Login')
-//     cy.get('#user').type('admin')
-//     cy.get('#password').type('admin')
-//     cy.get('#login').click()
-//     cy.title().should('eq','Order Pizza')
+describe('Login Page testing', () => {
+  it('Login', () => {
+    cy.visit('./testautomation-playground/login.html')
+    cy.title().should('eq','Login')
+    cy.get('#user').type('admin')
+    cy.get('#password').type('admin')
+    cy.get('#login').click()
+    cy.title().should('eq','Order Pizza')
 
-//   })
-// })
+  })
+})
 
-// describe('Drag and Drop Testing', () => {
-//   // not sure how to debug
-//   it('Mouse Actions', () => {
-//     // click, right click, double click
-//     cy.visit('./testautomation-playground/mouse_events.html')
-//     let clickAreaLocator = '#click_area';
-//     let clikTypeLocator = '#click_type';
-//     cy.get(clikTypeLocator).should('have.text', '');
-//     cy.get(clickAreaLocator).click();
-//     cy.get(clikTypeLocator).should('have.text', 'Click');
-//     cy.get(clickAreaLocator).rightclick();
-//     cy.get(clikTypeLocator).should('have.text', 'Right-Click');
-//     cy.get(clickAreaLocator).dblclick();
-//     cy.get(clikTypeLocator).should('have.text', 'Double-Click');
-//     // drag and drop
-//     // if we use have.text > it will fail because it contains '/n   Target /n'
-//     cy.get('#drop_target').should('contain.text', 'Target');
-//     // for drag and drop you need to install a plugin
-//     cy.get('#drag_source').drag('#drop_target');
-//     cy.get('#drop_target').should('have.text', 'Drop is successful!');
-//   })
-// })
+describe('Drag and Drop Testing', () => {
+  // not sure how to debug
+  it('Mouse Actions', () => {
+    // click, right click, double click
+    cy.visit('./testautomation-playground/mouse_events.html')
+    let clickAreaLocator = '#click_area';
+    let clikTypeLocator = '#click_type';
+    cy.get(clikTypeLocator).should('have.text', '');
+    cy.get(clickAreaLocator).click();
+    cy.get(clikTypeLocator).should('have.text', 'Click');
+    cy.get(clickAreaLocator).rightclick();
+    cy.get(clikTypeLocator).should('have.text', 'Right-Click');
+    cy.get(clickAreaLocator).dblclick();
+    cy.get(clikTypeLocator).should('have.text', 'Double-Click');
+    // drag and drop
+    // if we use have.text > it will fail because it contains '/n   Target /n'
+    cy.get('#drop_target').should('contain.text', 'Target');
+    // for drag and drop you need to install a plugin
+    cy.get('#drag_source').drag('#drop_target');
+    cy.get('#drop_target').should('have.text', 'Drop is successful!');
+  })
+})
 
 // iframes plugin: https://www.npmjs.com/package/cypress-iframe
 describe('Iframes', () => {
