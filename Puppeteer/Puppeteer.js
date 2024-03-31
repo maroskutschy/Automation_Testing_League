@@ -6,7 +6,8 @@ const { setMaxIdleHTTPParsers } = require('http');
 (async () => {
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
-  await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  // await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/login.html');
   const pageTitle1 = await page.title();
   assert.strictEqual(pageTitle1, 'Login');
   await page.type('#user', 'admin');
@@ -54,7 +55,8 @@ const { setMaxIdleHTTPParsers } = require('http');
 (async () => {
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
-  await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  //await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html');
   await page.setViewport({ width: 1920, height: 1080 });
   let clickAreaLocator = '#click_area';
   const clickTypeLocatorElement = await page.$("[id='click_type']")
@@ -79,7 +81,8 @@ const { setMaxIdleHTTPParsers } = require('http');
 (async () => {
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
-  await page.goto('file:///C:/testautomation-playground/frames.html');
+  //await page.goto('file:///C:/testautomation-playground/frames.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/frames.html');
   await page.setViewport({ width: 1920, height: 1080 });
   //identify frame 1
   const identifiedFrame1 = await page.$("#frame1")
