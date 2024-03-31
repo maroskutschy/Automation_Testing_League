@@ -1,7 +1,8 @@
 //@ts-check
 const { test, expect } = require('@playwright/test');
 test('Login', async ({ page }) => {
-  await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  //await page.goto('file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/login.html');
   await expect(page).toHaveTitle(/Login/);
   await page.getByPlaceholder('Username').fill('admin');
   await page.getByPlaceholder('Password').fill('admin');
@@ -10,9 +11,10 @@ test('Login', async ({ page }) => {
 
 });
 
-const { test, expect } = require('@playwright/test');
+//const { test, expect } = require('@playwright/test');
 test('Mouse actions', async ({ page }) => {
-  await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  //await page.goto('file:///C:/testautomation-playground/mouse_events.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html');
   // click, right click, double click
   let clickAreaLocator = '#click_area';
   let clikTypeLocator = '#click_type';
@@ -29,9 +31,10 @@ test('Mouse actions', async ({ page }) => {
   await expect(page.locator("#drop_target")).toHaveText("Drop is successful!");
 });
 
-const { test, expect } = require('@playwright/test');
+//const { test, expect } = require('@playwright/test');
 test('Iframes', async ({ page }) => {
-  await page.goto('file:///C:/testautomation-playground/frames.html');
+  //await page.goto('file:///C:/testautomation-playground/frames.html');
+  await page.goto('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/frames.html');
   // switCh to iframe 1
   const frame1 = page.frameLocator("#frame1")
   let button1InIframe1 = '#click_me_1'; 
