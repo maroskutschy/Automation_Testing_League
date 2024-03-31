@@ -6,6 +6,8 @@ fixture('Login Testing')
 
 test('Login', async t => {
     await t
+        //.resizeWindow(1365, 767)
+        //.maximizeWindow()
         await t.expect(Selector("title").innerText).eql('Login')
         .typeText('#user', 'admin')
         .typeText('#password', 'admin')
@@ -19,6 +21,8 @@ fixture('Mouse Actions Testing')
 
 test('Mouse actions', async t => {
     await t
+       //.resizeWindow(1366, 768)
+       //.maximizeWindow()
         // click, right click and double click
         let clickAreaLocator = '#click_area';
         let clikTypeLocator = '#click_type';
@@ -44,6 +48,8 @@ fixture('Iframes')
 
 test('Iframes testing', async t => {
     await t
+       //.resizeWindow(1366, 768)
+       .maximizeWindow()
        .switchToIframe('#frame1') 
        .expect(Selector('#click_me_1').innerText).eql('Click Me 1')
        .click('#click_me_1')

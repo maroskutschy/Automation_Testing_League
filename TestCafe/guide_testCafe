@@ -11,3 +11,5 @@ TestCafe Test Runner
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 testcafe chrome TestCafe.js
+
+testcafe chrome TestCafe.js --start-fullscreen
