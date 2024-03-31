@@ -3,7 +3,8 @@ const assert = require("assert");
 async function loginTest() {
   let driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html");
+    //await driver.get("file:///C:/Maros/Automation_Playgrounds/dineshvelhal_testautomation-playground/testautomation-playground/login.html");
+    await driver.get("file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/login.html");
     const pageTitle1 = await driver.getTitle();
     assert.strictEqual(pageTitle1, "Login");
     await driver.wait(until.titleIs("Login"), 4000);
@@ -19,13 +20,13 @@ async function loginTest() {
 }
 loginTest();
 
-const { Builder, By, until } = require("selenium-webdriver");
-const assert = require("assert");
+// const { Builder, By, until } = require("selenium-webdriver");
+// const assert = require("assert");
 async function dragAndDropTest() {
   let driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("file:///C:/testautomation-playground/mouse_events.html");
-
+    //await driver.get("file:///C:/testautomation-playground/mouse_events.html");
+    await driver.get("file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html");
    // click, right click, double click
    let clickArea = driver.findElement(By.id("click_area"));
    let clickType = driver.findElement(By.id("click_type"));
@@ -58,12 +59,13 @@ async function dragAndDropTest() {
 dragAndDropTest();
 
 
-const { Builder, By, until } = require("selenium-webdriver");
-const assert = require("assert");
+// const { Builder, By, until } = require("selenium-webdriver");
+// const assert = require("assert");
 async function iframesTest() {
   let driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("file:///C:/testautomation-playground/frames.html");
+    //await driver.get("file:///C:/testautomation-playground/frames.html");
+    await driver.get("file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/frames.html");
      // swith to iframe 1
     let iframe1 = driver.findElement(By.id("frame1"));
     await driver.switchTo().frame(iframe1);
@@ -104,3 +106,4 @@ async function iframesTest() {
   }
 }
 iframesTest();
+
