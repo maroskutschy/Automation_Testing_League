@@ -39,5 +39,5 @@ Visit https://playwright.dev/docs/intro for more information. ✨
 
 Happy hacking! 🎭
 
-npx playwright test Playwright.spec.js --headed
+npx playwright test Playwright.spec.js --headed --project="Google Chrome"
 npx playwright show-report
