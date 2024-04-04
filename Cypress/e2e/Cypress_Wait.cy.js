@@ -32,18 +32,33 @@ describe('Waiting', () => {
     //   cy.get('h3').contains('Can you see me?').should('be.visible')
     //  })
 
-     it('Waiting for Element to be Invisible', () => {
+    //  it('Waiting for Element to be Invisible', () => {
+    //     cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
+    //     cy.get('#min_wait').clear().type('10').should('have.value', '10')
+    //     cy.get('#max_wait').clear().type('10').should('have.value', '10')
+  
+    //     cy.get('#invisibility_target').should('be.visible')
+    //     cy.get('#spinner_gone').should('not.be.visible')
+    //     cy.get('#invisibility_trigger').click()
+    //     cy.get('#invisibility_target', { timeout: 15000 }).should('not.be.visible' )
+    //     cy.get('#spinner_gone').should('be.visible')
+    //     cy.get('#spinner_gone').contains('Thank God that spinner is gone!').should('be.visible')
+    //    })
+
+       it('Waiting for Element to be Enabled/has class', () => {
         cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
         cy.get('#min_wait').clear().type('10').should('have.value', '10')
         cy.get('#max_wait').clear().type('10').should('have.value', '10')
   
-        cy.get('#invisibility_target').should('be.visible')
-        cy.get('#spinner_gone').should('not.be.visible')
-        cy.get('#invisibility_trigger').click()
-        cy.get('#invisibility_target', { timeout: 15000 }).should('not.be.visible' )
-        cy.get('#spinner_gone').should('be.visible')
-        cy.get('#spinner_gone').contains('Thank God that spinner is gone!').should('be.visible')
-       })
+        cy.get('#enabled_target').should('be.disabled').and('have.class', 'btn btn-danger').and('have.text', 'Disabled\n                            Button')
+        cy.get('#enabled_trigger').click()
+        cy.get('#enabled_target', { timeout: 15000 }).should('be.enabled').and('have.class', 'btn btn-success').and('have.text', 'Enabled Button')
+        cy.get('h3').should('not.contain', 'Yay! I am super active now!')
+        cy.get('div').should('not.contain', 'See, you just clicked me!!')
+        cy.get('#enabled_target').click()
+        cy.get('h3').should('contain', 'Yay! I am super active now!')
+        cy.get('div').should('contain', 'See, you just clicked me!!')
+      })
 
 
 
