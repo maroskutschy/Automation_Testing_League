@@ -7,3 +7,4 @@ launch.json
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/users-api-server/node_modules

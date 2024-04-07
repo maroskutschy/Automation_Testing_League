@@ -30,3 +30,6 @@ toto nizsie nebolo potrebne:
 How to run in CMD:
 npm run cy:run:chrome --spec Cypress/e2e/Cypress.cy.js
 
+Cypress API testing exmaples:
+https://github.com/cypress-io/cypress-realworld-app/tree/develop/cypress/tests/api
+
