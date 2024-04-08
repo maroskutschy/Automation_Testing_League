@@ -60,16 +60,53 @@ describe('Waiting', () => {
       //   cy.get('div').should('contain', 'See, you just clicked me!!')
       // })
 
-      it('Waiting for Page Title change', () => {
+      // it('Waiting for Page Title change', () => {
+      //   cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
+      //   cy.get('#min_wait').clear().type('10').should('have.value', '10')
+      //   cy.get('#max_wait').clear().type('10').should('have.value', '10')
+
+      //   cy.title().should('eql', 'Wait Conditions')
+      //   cy.get('#page_title_trigger').click()
+      //   cy.title({ timeout: 15000 }).should('eql', 'My New Title!')
+      // })
+
+      // it('Waiting for Text', () => {
+      //   cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
+      //   cy.get('#min_wait').clear().type('10').should('have.value', '10')
+      //   cy.get('#max_wait').clear().type('10').should('have.value', '10')
+      
+      //   cy.get('#wait_for_text').should('have.text', '\n                                \n                            ')
+      //   cy.get('#text_value_trigger').click()
+      //   cy.get('#wait_for_text', { timeout: 15000 }).should('have.text', 'Submit')
+      // })
+
+      it('Waiting for Text', () => {
         cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
         cy.get('#min_wait').clear().type('10').should('have.value', '10')
         cy.get('#max_wait').clear().type('10').should('have.value', '10')
-        
-        cy.title().should('eql', 'Wait Conditions')
-        cy.get('#page_title_trigger').click()
-        cy.title({ timeout: 15000 }).should('eql', 'My New Title!')
-  })
+      
+        cy.get('#frm').should('not.exist')
+        cy.get('#wait_for_frame').click()
+        cy.get('#frm', { timeout: 15000 }).should('be.visible')
+        cy.get('#frm').should('exist')
+      
+        // iframe  - check text of button  - if it is NOT clicked and Click on It
+        cy.get("#frm")
+        .its('0.contentDocument')
+        .its('body')
+        .find('#inner_button').should('have.text', 'Inner Button').click()
 
+        // iframe  - click on button (2nd time, otherwise test will fail if there is only 1 click)
+        cy.get("#frm")
+        .its('0.contentDocument')
+        .its('body')
+        .find('#inner_button').click()
 
+        // iframe  - check text of button  - if it is CLICKED
+        cy.get("#frm")
+        .its('0.contentDocument')
+        .its('body')
+        .find('#inner_button').should('have.text', 'Clicked')
+      })
 
   })
