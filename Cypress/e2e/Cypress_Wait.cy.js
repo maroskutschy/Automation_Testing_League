@@ -80,7 +80,7 @@ describe('Waiting', () => {
       //   cy.get('#wait_for_text', { timeout: 15000 }).should('have.text', 'Submit')
       // })
 
-      it('Waiting for Text', () => {
+      it('Waiting for Frame', () => {
         cy.visit('../Cypress/testautomation-playground/expected_conditions.html')
         cy.get('#min_wait').clear().type('10').should('have.value', '10')
         cy.get('#max_wait').clear().type('10').should('have.value', '10')
