@@ -41,3 +41,6 @@ Happy hacking! 🎭
 
 npx playwright test Playwright.spec.js --headed --project="Google Chrome"
 npx playwright show-report
+
+API:
+https://www.lambdatest.com/learning-hub/playwright-api-testing
