@@ -8,3 +8,7 @@ launch.json
 /blob-report/
 /playwright/.cache/
 /users-api-server/node_modules
+/log.html
+/output.xml
+/playwright-log.txt
+/report.html
