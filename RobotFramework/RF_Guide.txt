@@ -1,0 +1,5 @@
+pip install robotframework-requests
+
+python --version 
+
+https://docs.robotframework.org/docs/examples/restfulbooker
