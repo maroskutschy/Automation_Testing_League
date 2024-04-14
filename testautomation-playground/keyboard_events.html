@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="Sample Web Application for Test Automation">
+    <meta name="author" content="Dinesh Velhal">
+
+    <title>Keyboard Actions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
+    </nav>
+
+    <br><br>
+
+    <div class="container align-items-center text-center">
+        <br>
+        <div class="card text-center shadow border-success">
+            <div class="card-header">
+                <h2>Keyboard Actions</h2>
+                <div class="col-sm-12 text-center">
+                    Type normal keys or any special key combinations inside the TextArea below.
+                    <br>Try keys like <kbd class="bg-light text-body">Ctrl</kbd>, <kbd class="bg-light text-body">Alt</kbd>, <kbd
+                        class="bg-light text-body">Shift</kbd>, <kbd class="bg-light text-body">Meta</kbd>,
+                    <kbd class="bg-light text-body">Home</kbd>, <kbd class="bg-light text-body">Down</kbd> and <kbd
+                        class="bg-light text-body">PageUp</kbd>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <textarea class="form-control shadow-sm" rows="15" id="area"></textarea>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-3"><strong style="margin-right: 10px">Modifier key Status: </strong></div>
+                    <div class="col-sm-3">
+                        <kbd class="bg-success" id="meta" style="display: none ">Meta</kbd>
+                        <kbd class="bg-success" id="ctrl" style="display: none ">Ctrl</kbd>
+                        <kbd class="bg-success" id="alt" style="display: none ">Alt</kbd>
+                        <kbd class="bg-success" id="shift" style="display: none ">Shift</kbd>
+                    </div>
+                    <div class="col-sm-2 border-left border-dark">
+                        <span><strong> Key code: </strong></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><span class="badge badge-dark " id="key" style="margin-right: 20px"></span></h5>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5><span class="badge badge-dark" id="code"></span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Coordinates: </small>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
+        </form>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        // All functions
+        $(document).ready(function () {
+            // Initialize the popover
+            $('[data-toggle="popover "]').popover();
+
+            var area = document.getElementById("area");
+            console.log(area);
+            area.addEventListener("keydown", handleKeyPress);
+        });
+
+        function handleKeyPress(zEvent) {
+            if (zEvent.ctrlKey)
+                $("#ctrl").show();
+            else
+                $("#ctrl").hide();
+
+            if (zEvent.altKey)
+                $("#alt").show();
+            else
+                $("#alt").hide();
+
+            if (zEvent.shiftKey)
+                $("#shift").show();
+            else
+                $("#shift").hide();
+
+            if (zEvent.metaKey)
+                $("#meta").show();
+            else
+                $("#meta").hide();
+
+            $("#key").text(zEvent.key);
+            $("#code").text(zEvent.code);
+            //console.log(zEvent.key);
+            //console.log(zEvent.code);
+            //console.log(zEvent.location);
+        }
+    </script>
+</body>
+
+</html>

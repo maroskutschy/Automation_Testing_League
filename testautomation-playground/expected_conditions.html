@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="Sample Web Application for Test Automation">
+    <meta name="author" content="Dinesh Velhal">
+
+    <title>Wait Conditions</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap 
+    <link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Your custom styles (optional) 
+    <link href="css/style.css" rel="stylesheet">-->
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand abs" href="index.html">The Playground</a>
+    </nav>
+
+    <br>
+
+    <div class="container align-items-center text-center">
+
+        <!-- 
+        ********************************************
+        Set Min and Max waits
+        ********************************************
+        -->
+        <div class="card text-center shadow border-success">
+            <div class="card-header justify-content-center">
+                <h4>Set the <code>Min.</code> and <code>Max.</code> waits. It will be used as the waiting
+                    range by the sections below.
+                </h4><br>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                            <form class="form-inline">
+                                    <div class="input-group mr-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Min. Wait</span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Min. Wait" id="min_wait" value="2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">sec.</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mr-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Max. Wait</span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Max. Wait" id="max_wait" value="5">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">sec.</span>
+                                        </div>
+                                    </div>
+                                </form>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <br>
+
+        
+
+        <!-- 
+        ********************************************
+        Wait for alert to be present
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for alert to be present</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Test the JavaScript <strong>alert</strong> and <strong>prompt</strong></p>
+                        <button type="button" class="btn btn-primary" id="alert_trigger">Show Alert</button>
+                        <button type="button" class="btn btn-primary" id="prompt_trigger">Show Prompt</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3 style="display: none" id="confirm_ok">Confirm response: <span
+                                class="badge badge-success" id="confirm_ok_badge">OK</span></h3>
+                        <h3 style="display: none" id="confirm_cancelled">Confirm response: <span
+                                class="badge badge-danger" id="confirm_cancelled_badge">Cancelled</span></h3>
+                        <h3 style="display: none" id="alert_handled"><span class="badge badge-success" id="alert_handled_badge">Alert
+                                handled</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for element to be visible
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for element to be visible</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and an invisible button will be visible!</p>
+                        <button type="button" class="btn btn-primary" id="visibility_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>A clickable button will appear here after <strong>Trigger</strong> button is clicked.</p>
+                        <button type="button" class="btn btn-danger" id="visibility_target" style="display: none"
+                            data-toggle="popover" title="Can you see me?"
+                            data-content="I just removed my invisibility cloak!!">Click Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for element to be Invisible
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for element to be Invisible</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and the spinner will disappear!</p>
+                        <button type="button" class="btn btn-primary" id="invisibility_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>This spinner will disappear after <strong>Trigger</strong> button is clicked.</p>
+                        <div class="spinner-border text-primary" role="status" id="invisibility_target">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <p style="display: none" id="spinner_gone">Thank God that spinner is gone!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for element to be enabled
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for element to be enabled / Wait for an attribute to contain certain text</h3>
+            </div>
+            <div class="card-body">
+                <div class="row  align-items-center text-center">
+                    <div class="col-sm-4">
+                        <p>Click the <strong>Trigger</strong> and the <strong>Disabled Button</strong> will become
+                            active.</p>
+                        <button type="button" class="btn btn-primary" id="enabled_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p class="text-left">After the <strong>Trigger</strong> button is clicked, this button will be
+                            active <br>and the <em>class</em> attribute will be <em>"btn btn-success"</em>.
+                        </p>
+                        <button type="button" class="btn btn-danger" id="enabled_target" data-toggle="popover"
+                            title="Yay! I am super active now!" data-content="See, you just clicked me!!"
+                            disabled>Disabled
+                            Button</button>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for Page Title to change
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for Page Title to change</h3>
+            </div>
+            <div class="card-body">
+                <p>Click the <strong>Trigger</strong> and the Page Title will change to "My New Title!"</p>
+                <button type="button" class="btn btn-primary" id="page_title_trigger">Trigger</button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for text/value to have specific values
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for text/value to have specific values</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-6">
+                        <p>Click the <strong>Trigger</strong> to enter text in the textbox and change the button caption
+                        </p>
+                        <button type="button" class="btn btn-primary" id="text_value_trigger">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-6 align-items-center">
+                        <form class="form-inline">
+                            <input type="text" class="form-control" placeholder="Creator of C" id="wait_for_value">
+                            <button class="btn btn-success" type="button" id="wait_for_text">
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 
+        ********************************************
+        Wait for frame to be available and then switch to it
+        ********************************************
+        -->
+        <div class="card text-center shadow  border-success">
+            <div class="card-header">
+                <h3>Wait for frame to be available and then switch to it</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <div class="col-sm-7">
+                        <p>Click the <strong>Trigger</strong> and a frame will appear after a few seconds</p>
+                        <button type="button" class="btn btn-primary" id="wait_for_frame">Trigger</button>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-5 align-items-center">
+                        <p></p>
+                        <div class="embed-responsive embed-responsive-21by9 shadow" style="display: none" id="frame">
+                            <!--<iframe src="inner.html" name="frm" id="frm"></iframe>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+    <br><br><br><br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 1px !important;">
+        <a class="navbar-brand" href="http://www.linkedin.com/in/dineshvelhal"><small class="font-weight-lighter">&copy;
+                2019 Dinesh Velhal </small></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <small class="font-weight-lighter text-light mr-3">Coordinates: </small>
+                </li>
+                <li class="nav-item active">
+                    <a href="http://www.linkedin.com/in/dineshvelhal" class="mr-3 fab fa-linkedin-in"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/dinesh_velhal" class="fab fa-twitter"></a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <small><a class="btn btn-success btn-sm" href="attribution.html" role="button"><i class="fa fa-heart"></i>
+                    Thanks
+                    To</a>
+                <a class="btn btn-light btn-sm" href="index.html" role="button"><i class="fa fa-home"></i>
+                    Home</a></small>
+        </form>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript 
+    <script type="text/javascript" src="js/mdb.min.js"></script>-->
+
+    <script>
+        // sleep for "ms" milliseconds
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms * 1000));
+        };
+
+        // generate random number between the min and max values
+        function randomSeconds() {
+            var min = parseInt($("#min_wait").val());
+            var max = parseInt($("#max_wait").val());
+
+            return (Math.floor(Math.random() * (max - min)) + min);
+        };
+
+        // Put trigger button in waiting state
+        function setWaitState(trigger, ms) {
+            var origTarget = trigger.html();
+
+            trigger
+                .html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> Waiting (' + ms + 's)')
+                .attr("disabled", true);
+
+            return origTarget;
+        }
+
+        // finish the wait state of the trigger button
+        function finishWaitState(trigger, origHTML) {
+            trigger.html(origHTML).attr("disabled", false);
+        }
+
+        // All functions
+        $(document).ready(function () {
+            // Initialize the popover
+            $('[data-toggle="popover"]').popover();
+
+            // wait for element visible
+            $("#visibility_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#visibility_target").show();
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for element invisible
+            $("#invisibility_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#invisibility_target").hide();
+                $("#spinner_gone").show();
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for element enabled
+            $("#enabled_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#enabled_target")
+                    .attr("class", "btn btn-success")
+                    .html("Enabled Button")
+                    .attr("disabled", false);
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for alert
+            $("#alert_trigger").click(async function () {
+                $("#confirm_cancelled").hide();
+                $("#confirm_ok").hide();
+                $("#alert_handled").hide();
+
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                a = alert("I am alerting you!");
+                $("#alert_handled").show();
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for confirm
+            $("#prompt_trigger").click(async function () {
+                $("#confirm_cancelled").hide();
+                $("#confirm_ok").hide();
+                $("#alert_handled").hide();
+
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                res = confirm("Choose wisely...\nIt's your life!");
+                if (res) {
+                    $("#confirm_ok").show();
+                } else {
+                    $("#confirm_cancelled").show();
+                }
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // Wait for Page Title to change
+            $("#page_title_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $(document).attr("title", "My New Title!");
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // Wait for text/value to have specific values
+            $("#text_value_trigger").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#wait_for_value").val("Dennis Ritchie");
+                $("#wait_for_text").html("Submit");
+
+                finishWaitState($(this), origTarget);
+            });
+
+            // wait for frame visible
+            $("#wait_for_frame").click(async function () {
+                var ms = randomSeconds();
+                origTarget = setWaitState($(this), ms);
+                console.log("wait = " + ms);
+                await sleep(ms);
+
+                $("#frame")
+                    .html('<iframe src="inner.html" name="frm" id="frm"></iframe>')
+                    .show();
+                //$('#frm').attr("src", $('#frm').attr("src"));
+                //document.getElementById("frm").contentDocument.location.reload(true);
+
+                finishWaitState($(this), origTarget);
+            });
+        });
+    </script>
+</body>
+
+</html>
