@@ -7,7 +7,8 @@ Open browser with 'Wait Conditions' webpage and setup the wait times
     New Browser    chromium    headless=No    args=["--start-maximized"]
     #New Context    viewport={'width': 1920, 'height': 1080}
     New Context    viewport=${None}
-    New Page    file:///C:/testautomation-playground/expected_conditions.html
+    #New Page    file:///C:/testautomation-playground/expected_conditions.html
+    New Page    file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/expected_conditions.html
     Get Title   contains    Wait Conditions
     Type Text    id=min_wait    10
     Get Text     id=min_wait    ==    10
