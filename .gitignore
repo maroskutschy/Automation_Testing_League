@@ -12,3 +12,4 @@ launch.json
 /output.xml
 /playwright-log.txt
 /report.html
+/interactive_console_output.xml
