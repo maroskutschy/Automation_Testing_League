@@ -38,3 +38,6 @@ Open package.json file and add the scripts section inside it:
 Now, start the application by running the npm start command from the terminal.
 
 You will see the following screen when you access it at http://localhost:3000/
+
+example of scenarios:
+https://robotframework-requests.netlify.app/doc/requestslibrary#Status%20Should%20Be
