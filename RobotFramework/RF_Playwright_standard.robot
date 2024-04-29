@@ -35,7 +35,16 @@ Mouse actions
     Click    id=drag_source
     Drag And Drop    id=drag_source    id=drop_target
     Get Text    id=drop_target    ==    Drop is successful!
-
+    # hover
+    Get Text    .dropbtn    ==    Choose Language
+    Get Text    id=hover_validate    ==    ${EMPTY}
+    Hover    .dropbtn
+    Click    id=dd_java
+    Get Text    id=hover_validate    ==    Java
+    Click    id=dd_python
+    Get Text    id=hover_validate    ==    Python
+    Click    id=dd_javascript
+    Get Text    id=hover_validate    ==    JavaScript
 
 Iframes
     New Page    file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/frames.html
