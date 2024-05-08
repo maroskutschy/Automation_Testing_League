@@ -3,3 +3,16 @@ pip install robotframework-requests
 python --version 
 
 https://docs.robotframework.org/docs/examples/restfulbooker
+
+how to upgrade Selenium library:
+pip install --upgrade robotframework-seleniumlibrary
+
+chromedriver download:
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+Chromedriver:
+a)This didn't help:
+chromedriver is stoed in: C:\Chromedriver\chromedriver.exe
+adn this path is added to env. variables
+b) This helped:
+store chromedriver.exe in the root of the project
