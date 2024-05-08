@@ -13,3 +13,5 @@ launch.json
 /playwright-log.txt
 /report.html
 /interactive_console_output.xml
+/NightwatchJs/nightwatch
+tests_output

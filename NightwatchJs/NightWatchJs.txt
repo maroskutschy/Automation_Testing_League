@@ -1,0 +1,6 @@
+how to install:
+npm init nightwatch
+
+how to run:
+npx nightwatch .\nightwatch\examples\basic\ecosia.js
+npx nightwatch .\test\NightWatchJs.js
