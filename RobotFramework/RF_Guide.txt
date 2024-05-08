@@ -16,3 +16,5 @@ chromedriver is stoed in: C:\Chromedriver\chromedriver.exe
 adn this path is added to env. variables
 b) This helped:
 store chromedriver.exe in the root of the project
+
+Mac where is stored chromedriver: /usr/local/bin/
