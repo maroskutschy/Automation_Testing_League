@@ -22,3 +22,4 @@ https://demo.reportportal.io/ui/#userProfile/apiKeys
 
 learn finnish language
 https://www.youtube.com/watch?v=NYz_rWFlTnM&list=PLERGeJGfknBTRTnq_scur-CXrLY8A3YRH
+Mac where is stored chromedriver: /usr/local/bin/
