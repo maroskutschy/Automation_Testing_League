@@ -16,3 +16,9 @@ chromedriver is stoed in: C:\Chromedriver\chromedriver.exe
 adn this path is added to env. variables
 b) This helped:
 store chromedriver.exe in the root of the project
+
+ReportPortal Demo instance:
+https://demo.reportportal.io/ui/#userProfile/apiKeys
+
+learn finnish language
+https://www.youtube.com/watch?v=NYz_rWFlTnM&list=PLERGeJGfknBTRTnq_scur-CXrLY8A3YRH
