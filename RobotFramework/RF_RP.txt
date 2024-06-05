@@ -1,0 +1,10 @@
+
+ReportPortal Demo instance:
+https://demo.reportportal.io/ui/#userProfile/apiKeys
+test2_cWynq3p2TlSrZJlwqTFGoZE9JEQR_HtNCE7bDpHILVWtvBHg9kErYJcuqcT6k8fd
+
+https://reportportal.io/docs/log-data-in-reportportal/test-framework-integration/Python/RobotFramework/
+https://github.com/reportportal/agent-Python-RobotFramework#readme
+https://dev.to/juperala/how-to-run-robot-framework-test-from-command-line-5aa
+
+robot --listener robotframework_reportportal.listener --variable RP_API_KEY:"test2_cWynq3p2TlSrZJlwqTFGoZE9JEQR_HtNCE7bDpHILVWtvBHg9kErYJcuqcT6k8fd" --variable RP_ENDPOINT:"https://demo.reportportal.io" --variable RP_LAUNCH:"Pytest Launch" --variable RP_PROJECT:"default_personal" --test Login RF_Selenium_standard.robot
