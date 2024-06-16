@@ -16,3 +16,7 @@ launch.json
 /NightwatchJs/nightwatch
 tests_output
 *.png
+/RobotFramework/log.html
+/RobotFramework/output.xml
+/RobotFramework/report.html
+
