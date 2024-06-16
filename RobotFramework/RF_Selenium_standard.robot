@@ -5,8 +5,8 @@ Test Teardown    Close All Browsers
 
 *** Keywords ***
 Open Chrome Browser
-    Open Browser    file:///C:/testautomation-playground/index.html    chrome 
-    #Open Browser    file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/index.html    chrome 
+    #Open Browser    file:///C:/testautomation-playground/index.html    chrome 
+    Open Browser    file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/index.html    chrome 
     Maximize Browser Window
 
 *** Test Cases ***
