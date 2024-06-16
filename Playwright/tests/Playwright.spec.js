@@ -8,7 +8,7 @@ test('Login', async ({ page }) => {
   await page.getByPlaceholder('Password').fill('admin');
   await page.getByRole('button', { name: 'Log in' }).click();
   await expect(page).toHaveTitle(/Order Pizza/);
-
+  await page.close()
 });
 
 //const { test, expect } = require('@playwright/test');
@@ -29,6 +29,7 @@ test('Mouse actions', async ({ page }) => {
   await expect(page.locator("#drop_target")).toHaveText("Target");
   await page.locator('#drag_source').dragTo(page.locator('#drop_target'));
   await expect(page.locator("#drop_target")).toHaveText("Drop is successful!");
+  await page.close()
 });
 
 //const { test, expect } = require('@playwright/test');
@@ -55,4 +56,5 @@ test('Iframes', async ({ page }) => {
   await expect(frame4.locator(button4InIframe4)).toHaveText('Click Me 4');
   await frame4.locator(button4InIframe4).click();
   await expect(frame4.locator(button4InIframe4)).toHaveText('Clicked');  
+  await page.close()
 });
