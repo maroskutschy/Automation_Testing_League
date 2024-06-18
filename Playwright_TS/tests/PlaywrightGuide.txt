@@ -51,3 +51,8 @@ Add args: ["--start-maximized"] to the launchOptions
 Remove the DeviceDescriptor Desktop Chrome from your project
 Set viewport: null in your project
 in playwright.config file
+
+RP guide:
+https://reportportal.io/docs/log-data-in-reportportal/test-framework-integration/JavaScript/Playwright/
+run standard vai VS COde plugin
+or: npx playwright test --config=playwright.config.ts
