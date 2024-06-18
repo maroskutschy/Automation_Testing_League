@@ -1,5 +1,4 @@
-// @ts-check
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 
 const RPconfig = {
   apiKey: 'XXX',
@@ -19,6 +18,7 @@ const RPconfig = {
   includeTestSteps: true
 };
 
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -26,9 +26,9 @@ const RPconfig = {
 // require('dotenv').config();
 
 /**
- * @see https://playwright.dev/docs/test-configuration
+ * See https://playwright.dev/docs/test-configuration.
  */
-module.exports = defineConfig({
+export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -39,7 +39,6 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  // reporter: 'html',
   reporter: [['@reportportal/agent-js-playwright', RPconfig]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -48,20 +47,13 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    launchOptions: {
-      // 1
-      args: ["--start-maximized"],
-    }
   },
-  
 
   /* Configure projects for major browsers */
   projects: [
     // {
     //   name: 'chromium',
-    //   use: 
-    //   { viewport: null },
-    //   //{ ...devices['Desktop Chrome'] },
+    //   use: { ...devices['Desktop Chrome'] },
     // },
 
     // {
@@ -90,9 +82,9 @@ module.exports = defineConfig({
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
      {
-       name: 'Google Chrome',
-       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-     },
+      name: 'Google Chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
@@ -102,4 +94,3 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-

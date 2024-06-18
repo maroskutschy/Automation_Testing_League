@@ -1,0 +1,17 @@
+{
+  "name": "playwright_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@reportportal/agent-js-playwright": "^5.1.8",
+    "@types/node": "^20.14.3"
+  }
+}

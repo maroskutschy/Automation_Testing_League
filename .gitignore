@@ -1,7 +1,10 @@
 node_modules
 .idea
 package-lock.json
-package.json
+/NightwatchJs/package.json
+/users-api-server/package.json
+/WebDriverIO/package.json
+/package.json
 launch.json
 /test-results/
 /playwright-report/
