@@ -1,3 +1,5 @@
+require('@4tw/cypress-drag-drop');
+
 describe('Login Page testing', () => {
   it('Login', () => {
     cy.visit('./testautomation-playground/login.html')
@@ -38,6 +40,7 @@ describe('Iframes', () => {
   it('Iframes test', () => {
     //Option 1
     // cy.visit('./testautomation-playground/frames.html')
+    // cy.visit('../Cypress/testautomation-playground/login.html')
     // cy.getIframe('#frame1').find('#click_me_1').should('have.text', 'Click Me 1')
     // cy.getIframe('#frame1').find('#click_me_1').click()
     // cy.getIframe('#frame1').find('#click_me_1').should('have.text', 'Clicked')

@@ -33,3 +33,10 @@ npm run cy:run:chrome --spec Cypress/e2e/Cypress.cy.js
 Cypress API testing exmaples:
 https://github.com/cypress-io/cypress-realworld-app/tree/develop/cypress/tests/api
 
+Report Portal:
+navod:
+https://github.com/reportportal/examples-js/tree/main/example-cypress
+najprv pred 1. spustenim: npm install
+how to run: 
+be in Cypress folder and run:
+npm test

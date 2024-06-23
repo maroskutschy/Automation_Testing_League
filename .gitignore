@@ -22,4 +22,5 @@ tests_output
 /RobotFramework/log.html
 /RobotFramework/output.xml
 /RobotFramework/report.html
+/Cypress/cypress/videos
 

@@ -1,8 +1,27 @@
 const { defineConfig } = require("cypress");
+const registerReportPortalPlugin = require('@reportportal/agent-js-cypress/lib/plugin');
 
 module.exports = defineConfig({
+  reporter: '@reportportal/agent-js-cypress',
+  reporterOptions: {
+    endpoint: 'https://demo.reportportal.io/api/v1',
+    apiKey: 'test_USF9m11rRLWmYz9VHupBYhMsO92cdC1HMh4fqlV9w7LggTyOBD0uGJLjw3WgmtqM',
+    launch: 'Cypress',
+    project: 'default_personal',
+    description: 'Cypress Demo',
+    attributes: [
+      {
+        key: 'attributeKey',
+        value: 'attributeValue',
+      },
+      {
+        value: 'anotherAttributeValue',
+      },
+    ],
+  },
   e2e: {
     setupNodeEvents(on, config) {
+      return registerReportPortalPlugin(on, config);
       // implement node event listeners here
     },
     // specPattern: [
