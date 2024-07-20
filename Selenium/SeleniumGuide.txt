@@ -7,3 +7,4 @@
 // how to run the test: node .\Selenium.js
 // Mac: how to run the test: node \Selenium.js
 Mac where is stored chromedriver: /usr/local/bin/
+how to donwload: https://googlechromelabs.github.io/chrome-for-testing/#stable

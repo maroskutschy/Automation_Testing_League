@@ -5,19 +5,19 @@ module.exports = defineConfig({
   reporter: '@reportportal/agent-js-cypress',
   reporterOptions: {
     endpoint: 'https://demo.reportportal.io/api/v1',
-    apiKey: 'test_USF9m11rRLWmYz9VHupBYhMsO92cdC1HMh4fqlV9w7LggTyOBD0uGJLjw3WgmtqM',
+    apiKey: 'XXX',
     launch: 'Cypress',
     project: 'default_personal',
     description: 'Cypress Demo',
-    attributes: [
-      {
-        key: 'attributeKey',
-        value: 'attributeValue',
-      },
-      {
-        value: 'anotherAttributeValue',
-      },
-    ],
+    // attributes: [
+    //   {
+    //     key: 'attributeKey',
+    //     value: 'attributeValue',
+    //   },
+    //   {
+    //     value: 'anotherAttributeValue',
+    //   },
+    // ],
   },
   e2e: {
     setupNodeEvents(on, config) {
