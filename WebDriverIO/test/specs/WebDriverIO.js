@@ -15,8 +15,8 @@
 
 describe('Drag and Drop Testing', () => {
     it('Mouse Actions', async () => {
-    await browser.url('file:///C:/testautomation-playground/mouse_events.html')
-    //await browser.url('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html')
+    //await browser.url('file:///C:/testautomation-playground/mouse_events.html')
+    await browser.url('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html')
     const clickAreaLocator = $('#click_area');
     const clikTypeLocator = $('#click_type');
     await expect(clikTypeLocator).toHaveText('');
