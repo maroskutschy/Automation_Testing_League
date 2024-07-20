@@ -1,0 +1,21 @@
+{
+    "apiKey": "test5_FiHL_fdGTDWtNrcF4piux9cP0U_yWKHgYcEg5FkA6VbVAHQXLC_x-ToMHKzshMZ_",
+    "endpoint": "https://demo.reportportal.io/api/v1",
+    "project": "default_personal",
+    "launch": "TestCafe",
+    "attributes": [
+        {
+            "key": "YourKey",
+            "value": "YourValue"
+        },
+        {
+            "value": "YourValue"
+        }
+    ],
+    "description": "TestCafe Demo",
+    "rerun": false,
+    "rerunOf": "2",
+    "mode": "DEFAULT",
+    "debug": false,
+    "parallelRun": false
+}
