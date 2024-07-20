@@ -1,19 +1,19 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const RPconfig = {
-  apiKey: 'XXX',
+  apiKey: 'test3_RWrSaPwEQcmIAbhJrybQphsCy_tIJhUG1eMSd3CG6jRBKmUPw5HO96f0CkAQgDBR',
   endpoint: 'https://demo.reportportal.io/api/v1',
-  project: 'maroskutschy_personal',
+  project: 'default_personal',
   launch: 'Playwright',
-  attributes: [
-    {
-      key: 'key',
-      value: 'value',
-    },
-    {
-      value: 'value',
-    },
-  ],
+  // attributes: [
+  //   {
+  //     key: 'key',
+  //     value: 'value',
+  //   },
+  //   {
+  //     value: 'value',
+  //   },
+  // ],
   description: 'Playwright demo',
   includeTestSteps: true
 };
