@@ -13,8 +13,8 @@
 //   });
 
   describe('Mouse testing', function() {
-    before(browser => browser.navigateTo('file:///C:/testautomation-playground/mouse_events.html'));
-   // before(browser => browser.navigateTo('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html'));
+    //before(browser => browser.navigateTo('file:///C:/testautomation-playground/mouse_events.html'));
+   before(browser => browser.navigateTo('file:///Volumes/Macintosh HD/Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Cypress/testautomation-playground/mouse_events.html'));
       it('Click,Right-Click,Double-Click', function(browser) {
       browser
         .expect.element('#click_type').text.to.equal('')
