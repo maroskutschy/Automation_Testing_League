@@ -9,6 +9,8 @@ npm test
 
 **Notes for Setup of Cypress**
 
+copy contect of 'testautomation-playground' folder in the root of the repository into folder: Cypress/testautomation-playground
+
 npm install cypress --save-dev
 npx cypress open
 
