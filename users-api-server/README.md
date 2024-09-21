@@ -19,6 +19,7 @@ npm install json-server
 Create a new file with the name .gitignore with the entry for node_modules inside it so the node_modules folder will not be pushed to GitHub while pushing the code to the GitHub repository.
 
 Create a new file with the name db.json and add the following contents inside it:
+```
 {
   "users": [
     {
@@ -33,10 +34,13 @@ Create a new file with the name db.json and add the following contents inside it
     }
   ]
 }
+```
 Open package.json file and add the scripts section inside it:
+```
 "scripts": {
   "start": "json-server db.json"
 }
+```
 Now, start the application by running the npm start command from the terminal.
 
 You will see the following screen when you access it at http://localhost:3000/
