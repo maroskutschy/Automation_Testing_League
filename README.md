@@ -9,6 +9,6 @@ use for sending results to ReportPortal:
 https://demo.reportportal.io/ui/#userProfile/apiKeys
 
 
-**how to login to Demo instance?**
+**how to login to Demo instance of ReporPortal?**
 
 https://reportportal.io/docs/tutorial/
