@@ -1,3 +1,11 @@
+**ReportPortal**: 
+
+run tests as follows:
+npx nightwatch --config ./nightwatch.conf.js --reporter ./reporter.js --test ./test/NightWatchJs.js
+
+
+**Notes for Setup of NightWatch**
+
 how to install:
 npm init nightwatch
 
@@ -15,6 +23,4 @@ npx nightwatch --test ./test/NightWatchJs.js
 Mac where is stored chromedriver: /usr/local/bin/
 how to donwload: https://googlechromelabs.github.io/chrome-for-testing/#stable
 
-RP:
-run tests as follows:
-npx nightwatch --config ./nightwatch.conf.js --reporter ./reporter.js --test ./test/NightWatchJs.js
+
