@@ -1,5 +1,6 @@
 **ReportPortal**: 
 **use Playwright_TS folder**
+
 update API key in: /Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Playwright_TS/playwright.config.ts
 run via Playwright VS code plugin for example following test: Login in /Users/Maros/VSCode_projects/Automation_Testing_League/Automation_Testing_League/Playwright_TS/tests/Playwright.spec.ts
 
