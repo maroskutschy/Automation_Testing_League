@@ -23,4 +23,5 @@ tests_output
 /RobotFramework/output.xml
 /RobotFramework/report.html
 /Cypress/cypress/videos
+/RobotFramework/playwright-log.txt
 
