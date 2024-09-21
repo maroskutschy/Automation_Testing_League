@@ -1,3 +1,5 @@
+**Notes for Setup of Selenium**
+
 //https://saucelabs.com/resources/blog/selenium-javascript-tutorial-web-automation
 //https://googlechromelabs.github.io/chrome-for-testing/#stable
 //C:\Users\Maros\AppData\Local\rasjani\WebDriverManager\
