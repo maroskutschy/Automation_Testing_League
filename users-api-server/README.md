@@ -1,3 +1,5 @@
+**Notes for Setup of API server**
+
 https://dev.to/myogeshchavan97/how-to-easily-create-and-host-your-own-rest-api-without-writing-a-single-line-of-code-2np4
 
 start the application by running the npm start command from the terminal
